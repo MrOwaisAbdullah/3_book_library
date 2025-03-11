@@ -162,7 +162,7 @@ def format_book(book):
 def main():
     library = load_library()
     while True:
-        print("\nPersonal Library Manager")
+        print("\nWelcome to Your Personal Library Manager")
         print("1. Add a book")
         print("2. Remove a book")
         print("3. Search for a book")
@@ -192,7 +192,7 @@ def main():
             save_library(library)
         elif choice == '8':
             save_library(library)
-            print("Library saved to file. Goodbye!")
+            print("Goodbye!")
             break
         else:
             print("Invalid choice. Please try again.")

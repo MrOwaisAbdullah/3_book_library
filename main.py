@@ -195,7 +195,7 @@ def main():
             save_library(library)
         elif choice == '8':
             save_library(library)
-            print("\n\nGoodbye!\n")
+            print("\nGoodbye!\n\n")
             break
         else:
             print("Invalid choice. Please try again.")

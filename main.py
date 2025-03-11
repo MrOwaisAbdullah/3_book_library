@@ -162,7 +162,7 @@ def format_book(book):
 def main():
     library = load_library()
     while True:
-        print("\nWelcome to Your Personal Library Manager\n")
+        print("\nWelcome to My Personal Library Manager\n")
         print("1. Add a book")
         print("2. Remove a book")
         print("3. Search for a book")

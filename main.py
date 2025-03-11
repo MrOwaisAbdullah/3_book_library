@@ -114,6 +114,7 @@ def search_book(library):
         print("\nMatching Books:")
         for book in matches:
             print(format_book(book))
+        print("\n")
     else:
         print("No matching books found.\n")
 
@@ -123,6 +124,7 @@ def display_books(library):
     if not library:
         print("\nYour library is empty.\n")
         return
+    print("\nYour Books:")
     for index, book in enumerate(library, start=1):
         title = book['title']
         author = book['author']
@@ -130,6 +132,7 @@ def display_books(library):
         genre = book['genre']
         read_status = "✅ Read" if book['read'] else "🟩 Unread"
         print(f"{index}. {title} by {author} ({year}) - {genre} - {read_status}")
+    print("\n")
 
 # Display statistics
 def display_statistics(library):
@@ -140,7 +143,7 @@ def display_statistics(library):
         return
     read_count = sum(1 for book in library if book['read'])
     percentage = (read_count / total) * 100
-    print(f"\nTotal books: {total}\nPercentage read: {percentage:.1f}%")
+    print(f"\nTotal books: {total}\nPercentage read: {percentage:.1f}%\n")
 
 # Recommend an unread book
 def recommend_book(library):
@@ -148,7 +151,7 @@ def recommend_book(library):
     unread_books = [book for book in library if not book['read']]
     if unread_books:
         recommended = random.choice(unread_books)
-        print(f"\nRecommended book: {format_book(recommended)}")
+        print(f"\nRecommended book: {format_book(recommended)}\n")
     else:
         print("\nNo unread books available.")
 
